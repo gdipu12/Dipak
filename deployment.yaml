@@ -1,0 +1,24 @@
+kind: Deployment
+metadata:
+        creationTimestamp: null
+        labels:
+           app: mydeploy
+         name: mydeploy
+spec:
+   replicas: 3
+   selector:
+       matchLabels:
+            app: mydeploy
+
+       strategy: {}
+       template:
+          metadate:
+              creationTimestamp: null
+                 labels:
+                    app: mydeply
+                 spec:
+                    containers:
+                            - image: tutum/hello-world
+                              name: nginx
+                              resources: {}
+statsu: {}              
